@@ -1,5 +1,4 @@
 const express = require('express');
-const http = require('http');
 
 const app = express();
 
@@ -64,4 +63,4 @@ app.get('/randomcode/:num', (req, res) => {
 	res.send([{ randCode: `${resArr.join('')}` }]);
 });
 
-http.createServer(app).listen(80);
+app.listen(80);
