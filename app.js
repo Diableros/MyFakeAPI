@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.disable('etag');
+
 app.get('/', (req, res) => {
 	res.format({
 		'text/html'() {
@@ -9,7 +11,7 @@ app.get('/', (req, res) => {
 		  <meta charset="UTF-8" />
 		  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		  <title>Document</title>
+		  <title>My Fake API</title>
 		  <style>
 			  body {
 				  font-family: 'Arial';
@@ -43,7 +45,7 @@ app.get('/', (req, res) => {
 
 app.get('/numstring/:num', (req, res) => {
 	const num = req.params.num;
-	res.send([{ num: `${num}` }]);
+	res.json([{ num: `${num}` }]);
 });
 
 app.get('/randomcode/:num', (req, res) => {
@@ -60,7 +62,7 @@ app.get('/randomcode/:num', (req, res) => {
 		resArr.push(chars[curIndex]);
 	}
 	// console.log(resArr);
-	res.send([{ randCode: `${resArr.join('')}` }]);
+	res.json([{ randCode: `${resArr.join('')}` }]);
 });
 
 app.listen(port, () => console.log(`MyFakeApp listening on port ${port}!`));

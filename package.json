@@ -1,15 +1,19 @@
 {
 	"name": "myfakeapi",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Fake API for very simple request expreiments",
+	"repository": "https://github.com/Diableros/MyFakeAPI",
 	"main": "app.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "node app.js"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Diablero",
 	"license": "ISC",
 	"dependencies": {
 		"express": "^4.18.2"
+	},
+	"engines": {
+		"node": ">=14"
 	}
 }
