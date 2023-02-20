@@ -4,7 +4,11 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 app.disable('etag');
-app.use(cors());
+app.use(
+	cors({
+		origin: ['*'],
+	})
+);
 
 app.get('/', (req, res) => {
 	res.format({
