@@ -1,6 +1,6 @@
 const express = require('express');
-
 const app = express();
+const port = process.env.PORT || 3001;
 
 app.get('/', (req, res) => {
 	res.format({
@@ -63,4 +63,4 @@ app.get('/randomcode/:num', (req, res) => {
 	res.send([{ randCode: `${resArr.join('')}` }]);
 });
 
-app.listen(80);
+app.listen(port, () => console.log(`MyFakeApp listening on port ${port}!`));
