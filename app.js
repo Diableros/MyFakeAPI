@@ -3,7 +3,6 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3001;
 
-// app.disable('etag');
 app.use(
 	cors({
 		origin: true,
@@ -25,7 +24,7 @@ app.get('/', (req, res) => {
 		  </style>
 	  </head>
 	  <body>
-		  <h3>/numstring/:num - obj with number in string format</h3>
+		  <h6>/numstring/:num - obj with number in string format</h6>
 		  <pre>
 [
   {
@@ -34,11 +33,11 @@ app.get('/', (req, res) => {
 ]
 		  </pre>
 		  <br>
-		  <h3>/randomcode/:num - obj with random code having length = :num</h3>
+		  <h6>/randomcode/:num - obj with random code having length = :num</h6>
 		  <pre>
 [
   {
-    randCode: "..."
+    randCode: "YoUrRaNdOmCoDe"
   }
 ]
 		  </pre>
