@@ -6,7 +6,7 @@ const port = process.env.PORT || 3001;
 app.disable('etag');
 app.use(
 	cors({
-		origin: ['*'],
+		origin: true,
 	})
 );
 
